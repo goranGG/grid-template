@@ -2,6 +2,7 @@
     --gray-dark: #333333;
     --gray: #666666;
     --gray-light: #eaeaea;
+    --blue: #226699;
 }
 
 body{
@@ -31,6 +32,8 @@ p {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .btn{
@@ -73,4 +76,58 @@ ul {
 
 #showcase .content-wrap{
     padding: 0 2rem;
+}
+
+
+/* Section A */
+#section-a {
+    background: var(--gray-light);
+    color: var(--gray-dark);
+    padding-bottom: 2rem;
+}
+#section-a .content-wrap{
+    padding: 0 2rem;
+}
+
+
+/* Section B */
+#section-b {
+    padding: 2rem 1rem 1rem;
+}
+
+#section-b li{
+    margin-bottom: 1rem;
+    background: white;
+    color: var(--gray-dark);
+}
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Section C */
+#section-c {
+    background: white;
+    color: var(--gray-dark);
+    padding: 2rem;
+}
+
+/* Section D */
+#section-d .box {
+    padding: 2rem;
+    color: white;
+}
+#section-d .box:first-child{
+    background: var(--blue);
+}
+
+/* Footer */
+#main-footer{
+    padding: 2rem;
+    background: black;
+    color: white;
+    text-align: center;
+}
+#main-footer a{
+    color: var(--blue);
+    text-decoration: none;
 }
