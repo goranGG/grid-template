@@ -50,12 +50,18 @@ ul {
     color: var(--gray-dark);
 }
 
+.grid {
+    max-width: 100vw;
+    display: grid;
+    justify-content: center;
+}
 
 /* Header */
 #showcase {
     min-height: 33rem;
     color: white;
     text-align: center;
+    width: 100%;
 }
 #showcase .background-image {
     position: absolute;
@@ -78,30 +84,61 @@ ul {
     padding: 0 2rem;
 }
 
+/* Sections */
+#main {
+    display: grid;
+    grid-template-columns: 
+        [col-1] 1fr
+        [col-2] 1fr
+        [col-3] 1fr
+        [col-end]
+        ;
+}
 
 /* Section A */
 #section-a {
     background: var(--gray-light);
     color: var(--gray-dark);
     padding-bottom: 2rem;
+    grid-column: col-1 / col-end;
 }
 #section-a .content-wrap{
     padding: 0 2rem;
+    grid-column: col-2;
+
+}
+
+.content-description{
+    margin: auto;
+    width: 33vw;
+    columns: 2;
 }
 
 
 /* Section B */
 #section-b {
     padding: 2rem 1rem 1rem;
+    grid-column: col-1 / col-end;
+}
+
+#section-b ul {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(300px, 450px));
 }
 
 #section-b li{
     margin-bottom: 1rem;
     background: white;
     color: var(--gray-dark);
+    margin: 1rem;
 }
 .card-content {
     padding: 1.5rem;
+}
+.card > img {
+    width: 100%;
+    height: 20rem;
 }
 
 /* Section C */
@@ -109,12 +146,18 @@ ul {
     background: white;
     color: var(--gray-dark);
     padding: 2rem;
+    grid-column: col-1 / col-end;
 }
 
 /* Section D */
+#section-d {
+    grid-column: col-1 / col-end;
+    display: flex;
+}
 #section-d .box {
     padding: 2rem;
     color: white;
+    width: 50vw;
 }
 #section-d .box:first-child{
     background: var(--blue);
